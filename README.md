@@ -35,7 +35,9 @@ Since every file has a corresponding hash, you can tell the AI to act as an **In
 ---
 
  **DIRECTIVE: INITIATE MATRIX-WIDE FIDELITY AUDIT**
- **The Issue:** I am receiving `{"name": "chris"}` but the application expects `{"id": 1}`. I am unsure which state ID ($F_n$) or file contains this mismatch.
+ **The Issue:** 
+ 
+ I am receiving `{"name": "chris"}` but the application expects `{"id": 1}`. I am unsure which state ID ($F_n$) or file contains this mismatch.
 
  **Task:**  1. **Scan the Registry:** Look through all `.hash.md` files and the `deps.map.json`.
  
