@@ -36,8 +36,12 @@ Since every file has a corresponding hash, you can tell the AI to act as an **In
 
  **DIRECTIVE: INITIATE MATRIX-WIDE FIDELITY AUDIT**
  **The Issue:** I am receiving `{"name": "chris"}` but the application expects `{"id": 1}`. I am unsure which state ID ($F_n$) or file contains this mismatch.
+
  **Task:**  1. **Scan the Registry:** Look through all `.hash.md` files and the `deps.map.json`.
+ 
  2. **Identify the Culprit:** Find any state ID that defines a `User` or `API Response` schema.
+ 
  3. **Trace the Leak:** Determine which state initialized the `id: number` assumption.
+ 
  4. **Report:** Tell me the exact **BigInt ID** and the file path where the reality (the API) and the Matrix (the code) have diverged.
  **Do not propose a fix yet. Just identify the corrupted State ID.**
