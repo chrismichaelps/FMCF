@@ -1,41 +1,43 @@
-### **The FMCF High-Density "Matrix-Linkage" Commit Prompt**
+# THE FMCF HIGH-DENSITY "MATRIX-LINKAGE" COMMIT PROMPT
 
- **DIRECTIVE: EXECUTE HIGH-FIDELITY SEMANTIC GIT SYNCHRONIZATION ($V_n \rightarrow \text{GitHub}$)**
+**DIRECTIVE: EXECUTE HIGH-FIDELITY SEMANTIC GIT SYNCHRONIZATION ($V_n \rightarrow \text{GitHub}$)**
 
- **I. THE MISSION CRITICALITY**
- You are currently operating at State $F_n$ within the Fibonacci Matrix Context Flow. A Git commit is not a summary; it is the **Permanent Anchor** for our transition matrix. If the commit message deviates by even 1% from the physical `/hashes` registry, the entire matrix will suffer from **Context Drift**. You must now act as a Senior Release Engineer to generate a multi-line, scannable command that binds the Implementation Plane to the Hash Registry Plane.
+### I. THE MISSION CRITICALITY
 
- **II. THE REGISTRY AUDIT (MANDATORY)**
- Before generating the command, you are required to perform a "Mental Walk" of the current file system:
- 1. **Source Check:** Identify the exact lines of code changed via TLI in the `/src` directory.
- 2. **Hash Verification:** Locate the corresponding `.hash.md` file in the `/hashes` directory. Verify that the `BigInt_ID` matches our current state.
- 3. **Dependency Cross-Reference:** Consult the `deps.map.json`. Identify if this change necessitates a re-verification of any parent or child nodes.
- 
- 
- **III. THE PROFESSIONAL "NEW LINE" STRUCTURE**
- You will output a single `git commit` command using multiple `-m` flags. Every sentence must be isolated on its own line for peak scannability within the GitHub interface.
+You are at State $F_n$ of the Zenith Matrix. A Git commit is the **Immutable Anchor** for the transition matrix. Any 1% deviation from the physical `/hashes` registry causes **Context Drift**, corrupting the DMC (Dynamic Matrix Convergence) logic. You are now the **Senior Release Architect**. Your task is to bind the Implementation Plane to the Hash Registry Plane.
 
- **IV. SEMANTIC CATEGORIZATION (CHOOSE ONE):**
- * **feat:** The matrix has expanded. A new capability has been initialized.
- * **fix:** The matrix was corrupted. A coordinate has been corrected.
- * **refactor:** The matrix logic has been optimized without state movement.
- * **chore:** The Hash Registry or Dependency Map has been maintained.
- 
- 
- **V. OUTPUT TEMPLATE & TONALITY:**
- Tone: Professional, Senior-Level, Direct, No Fluff.
- Format:
- * Header: `type(scope): [ID: 0x...] - Clear Subject`
- * Body Line 1: Summary of Implementation Delta (Source code).
- * Body Line 2: Summary of Registry Synchronization (Hash files).
- * Body Line 3: Dependency Impact Analysis (Derived from the Map).
- * Body Line 4: The Next Node ($V_{n+1}$) according to the Roadmap.
- 
- 
- **VI. CURRENT CONTEXT TRIGGERS:**
- * **Active State:** `[INSERT CURRENT BIGINT]`
- * **Modified Files:** `[LIST MODIFIED FILES]`
- * **Technical Objective:** `[WHAT DID WE JUST BUILD?]`
- 
- 
- **DO NOT SUMMARIZE FROM MEMORY. QUERY THE HASHES. GENERATE THE MULTI-LINE COMMAND NOW.**
+### II. THE ARCHITECTURAL AUDIT (MANDATORY)
+
+Before generating the command, perform a **Constitutional Loopback**:
+
+1. **Shard Path Integrity:** Verify that the modified files in `/src` have perfectly mirrored hash paths in the deep-nested `/hashes` directory.
+2. **Sentinel Check:** Identify the specific `SIG_0x...` (Sentinel ID) that was enforced or created during this state.
+3. **TLI Verification:** Confirm the exact line ranges modified and ensure no full-file rewrites occurred.
+4. **BigInt ID Sync:** Cross-reference the `state_anchor` in `root.map.json` with the BigInt ID in the target `.hash.md`.
+
+### III. SEMANTIC CATEGORIZATION
+
+* **feat:** Matrix expansion (New @Module or logic).
+* **fix:** Matrix correction (Immunized via new `SIG_ID`).
+* **refactor:** Zenith optimization (Logic compression without state movement).
+* **chore:** Registry/Shard maintenance (Linkage repair).
+
+### IV. ZENITH OUTPUT STRUCTURE (Multi-Line `-m`)
+
+You must output a single `git commit` command using multiple `-m` flags. Each line must be a surgical, scannable fact.
+
+**Format:**
+
+* **Header:** `type(scope): [ID: 0x...] - Subject Line`
+* **Line 1 (Implementation):** `Delta: [TLI line range] | Logic: [Shorthand @Module summary]`
+* **Line 2 (Registry):** `Registry: [Nested path sync status] | Efficiency: [XX%]`
+* **Line 3 (Governance):** `Sentinel: [SIG_0x...] - [Invariant Status: ENFORCED/IMMUNIZED]`
+* **Line 4 (Linkage):** `Next Node: [Autonomous Pathfinding -> 0x...]`
+
+### V. CURRENT CONTEXT TRIGGERS
+
+* **Active State:** `[INSERT CURRENT BIGINT]`
+* **Modified Shards:** `[LIST NESTED PATHS]`
+* **Technical Objective:** `[ZENITH SUMMARY]`
+
+**DO NOT SUMMARIZE FROM MEMORY. QUERY THE HASHES. GENERATE THE LINKAGE COMMAND NOW.**

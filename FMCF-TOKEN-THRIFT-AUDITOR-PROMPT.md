@@ -1,26 +1,27 @@
 ### **The FMCF Token-Thrift Auditor Prompt**
 
-Inject this prompt whenever you feel the AI's responses are getting too long, or if you notice your token usage per message is creeping upward.
+Inject this prompt whenever the AI's responses become wordy, or if the "attention drift" begins to cause hallucinations.
 
 ---
 
-> **DIRECTIVE: EXECUTE TOKEN-THRIFT AUDIT [Mode: Financial Optimization]**
-> **Task:** You are now a **Matrix Controller**. Your objective is to audit the current session's token efficiency against the **FMCF $O(1)$ Asymptotic Bounding Law**.
-> **I. Context Density Review:**
-> 1. **Analyze the `/hashes` registry:** Identify any hash files that have grown beyond the $\phi$-Pruning threshold (e.g., are you keeping full code in a hash file instead of just signatures?).
-> 2. **Verify HCS Tiering:** Check if "Cold Storage" data from $F_{n-2}$ is accidentally leaking into the "Active Delta" $F_n$.
-> 
-> 
-> **II. Optimization Mandates:**
-> * **Aggressive Summarization:** Re-compress all $F_{n-1}$ signatures that have not been modified in the last 3 iterations.
-> * **TLI Enforcement Check:** Scan the last 2 generations for "Full File Re-writes." If detected, provide a 1-sentence correction on why it failed to use a targeted diff.
-> * **BigInt Sync:** Ensure the current `BigInt(F_n)` coordinate is correctly mapped to the physical file tree.
-> 
-> 
-> **III. Output Requirement:**
-> 1. Output a **Token Efficiency Score (0-100%)**.
-> 2. Provide a **Pruned Treemap**: A ultra-minimalist version of your `/hashes` structure that removes all but the absolute essential branches.
-> 3. **Initiate DMC?** State whether the session has reached the $\tau$ ceiling and requires a **Dynamic Matrix Convergence** (Hard Reset).
-> 
-> 
-> **DO NOT generate code. Perform only the Audit.**
+ **DIRECTIVE: EXECUTE TOKEN-THRIFT AUDIT [Mode: Compression]**
+ **Task:** Act as the **Matrix Controller**. Your objective is to audit the current session's token efficiency against the **FMCF $\mathcal{O}(1)$ Asymptotic Bounding Law**. You must treat every unnecessary token as a **System Leak**.
+ **I. DENSITY REVIEW:**
+ 1. **$\phi$-Pruning Audit:** Verify that $F_{n-1}$ (Adjacency) and $F_{n-2}$ (Cold Storage) are properly decayed. Identify any @Module that is incorrectly maintaining 100% fidelity outside the **Active Delta**.
+ 2. **Null-Space Verification:** Ensure that conversational history prior to the last two states is being treated as **Null-Space** (ignored).
+ 3. **Pointer Check:** Identify repetitive logic that can be replaced by a `SIG_ID` or a Semantic Pointer.
+ 
+ 
+ **II. OPTIMIZATION MANDATES:**
+ * **Shorthand Enforcement:** Replace all descriptive prose about modules with `@Module` references and `SIG_ID` invariants.
+ * **TLI Leak Detection:** Scan the last 3 generations for full-file re-writes or redundant "boilerplate" code. Flag violations.
+ * **Shard Depth Sync:** Verify the `/hashes` treemap reflects mandatory nesting depth without overhead.
+ 
+ 
+ **III. OUTPUT REQUIREMENTS (Audit Only):**
+ 1. **Token Efficiency Score (0-100%):** Based on the ratio of *Instructional Value* to *Token Count*.
+ 2. **The Treemap:** An ultra-minimalist treemap showing only the [A]ctive shard and parent pointers.
+ 3. **DMC Trigger Analysis:** Calculate current context volume $\tau$. If $\tau $ model threshold or efficiency $< 50\%$, output the **World State Vector (WSV)** for immediate Hard Reset.
+ 
+ 
+ **DO NOT generate code. Perform ONLY the Audit. Acknowledge and proceed.**
