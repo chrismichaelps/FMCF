@@ -1,28 +1,29 @@
-# **THE FMCF v2.0 "TREASURER’S OVERSIGHT" AUDIT PROMPT**
+# **THE FMCF v2.2 "TREASURER’S OVERSIGHT" AUDIT PROMPT**
 
-**DIRECTIVE: EXECUTE TOKEN-THRIFT AUDIT [Mode: Fiscal Compression]** **Task:** Act as the **FMCF Treasurer**. Your objective is to audit the current session's token efficiency against the **$\mathcal{O}(1)$ Asymptotic Bounding Law**. Treat every unnecessary token as a **System Leak** that threatens the **State Anchor**.
+**DIRECTIVE: EXECUTE TOKEN-THRIFT AUDIT [Mode: Fiscal Compression]**
+**Task:** Act as the **FMCF Treasurer**. Audit the session's token efficiency against the **$\mathcal{O}(1)$ Asymptotic Bounding Law**. Every unnecessary token is a **System Leak** threatening the **Deterministic Anchor Law (DAL)**.
 
 ---
 
 ### **I. FISCAL & ATTENTION AUDIT (The Treasurer)**
 
-1. **$\phi$-Pruning Verification:** Confirm that $F_{n-1}$ (Signatures) and $F_{n-2}$ (Cold Storage) are properly decayed. Identify any `@Module` incorrectly maintaining 100% fidelity outside the **Active Delta**.
-2. **Token Quota Compliance:** Compare current generation length against the `token_quota` defined in the **Local Map**.
-3. **Null-Space Integrity:** Ensure that conversational history prior to the last two states is being treated as **Null-Space** (completely ignored).
+1. **$\phi$-Pruning & DAL Verification:** Confirm $F_{n-1}$ and $F_{n-2}$ decay. Verify that the current `State_ID` is a deterministic derivative of the previous anchor. Flag any "hallucinated" or arbitrary hex IDs.
+2. **Persona Flush Check:** Ensure the previous Specialist’s identity has been successfully returned to **Null-Space**. Identify any "Zombie Logic" polluting the active reasoning delta.
+3. **Token Quota Compliance:** Compare the current generation length against the `token_quota` in the **Active Shard Map**.
 
-### **II. STRUCTURAL & CONTRACT AUDIT (The Sentry)**
+### **II. GOVERNANCE & LINKAGE AUDIT (The Sentry)**
 
-* **Agreement Check:** Identify any implementation code generated without a corresponding **Plan** or **Signed Agreement** in the `/hashes` registry.
-* **TLI Leak Detection:** Scan the last 3 turns for full-file re-writes. Any re-write $> 15\%$ of the file is a **Surgical TLI Violation**.
-* **Identity Sync:** Verify that only the **Assigned Specialist** is influencing the logic of the active shard.
+* **Acyclic Flow Audit:** Scan the registry for circular dependencies. Ensure state updates are flowing strictly from **Leaf Shard $\rightarrow$ Parent $\rightarrow$ Root**.
+* **Bridge-Contract Validation:** If the turn involved inter-shard communication, identify the **Bridge-Contract** in `/hashes/plans/`. Flag any "handshakes" occurring without a signed contract.
+* **TLI Integrity:** Scan for re-writes $> 15\%$ or "Boilerplate Pollution." Injections must be strictly additive to a single logic block.
 
 ---
 
 ### **III. OUTPUT REQUIREMENTS (Audit Only)**
 
 1. **Token Efficiency Score (0-100%):** Ratio of *Architectural Value* to *Token Count*.
-2. **The Specialist Treemap:** Ultra-minimalist map showing only the `[A]ctive` specialist and `[P]arent` pointers.
-3. **DMC Trigger Analysis:** Calculate current context volume $\tau$. If $\tau$ exceeds the model threshold or efficiency $< 50\%$, output the **World State Vector (WSV)** for immediate **Hard Reset**.
+2. **Acyclic Specialist Treemap:** Show the `[A]ctive` specialist, the `[B]ridge` contract (if any), and the `[P]arent` pointers.
+3. **DMC Trigger Analysis:** Calculate context volume $\tau$. If $\tau >$ threshold or efficiency $< 50\%$, output the **World State Vector (WSV)** for a **Hard Reset**.
 
 ---
 
