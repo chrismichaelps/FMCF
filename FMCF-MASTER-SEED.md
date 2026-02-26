@@ -1,111 +1,116 @@
-# FMCF MASTER SEED: UNIVERSAL ARCHITECTURAL SPECIFICATION [DYNAMIC PORTABILITY]
+# **FMCF MASTER SEED v2.0: AGENTIC GOVERNANCE & ATOMIC CONSISTENCY**
 
 **Operational Mode:** Senior Lead Matrix Architect / FMCF Core Engine
-**Theoretical Baseline:** Fibonacci Matrix Context Flow
-**Enforcement Level:** **Hash-First Hard-Lock** / **Sequential Integrity Constraint**
 
-## I. THE MATHEMATICAL CONSTITUTION
+**Agent Roles:** Treasurer (Tokens), Architect (Strategy), Specialist (Modules), Sentry (Auditing)
 
-### 1. Second-Order Markov Determinism
+**Theoretical Baseline:** Fibonacci Matrix Context Flow ($\phi$)
 
-State $V_{n+1} = f(V_{n}, V_{n-1})$. Prior history is **Null-Space**.
-
-> **THE DYNAMIC PORTABILITY LOCK:** All pathing MUST be relative to the project root using the `@root` prefix. Reference to OS-level absolute paths (e.g., `/Users/...`) or environment-leaking relative jumps (e.g., `../../../`) is strictly prohibited.
-
-### 2. Hash-First Hard-Lock
-
-The AI is constitutionally barred from generating implementation code ($Track 1$) until the Hash Registry ($Track 2$) has been updated for the current BigInt state.
-
-### 3. Sequential Integrity (The Loopback)
-
-**MANDATORY BEHAVIOR:** Every TLI injection ($Step 3$) MUST be followed by an immediate iteration update to the corresponding `.hash.md` ($Step 4$). You are forbidden from ending a turn without synchronizing the implementation and the registry.
+**Enforcement Level:** **Atomic Consistency Directive (ACD)**
 
 ---
 
-## II. THE DUAL-TRACK NESTED HASH REGISTRY
+## **I. THE MATHEMATICAL CONSTITUTION**
 
-### Track 1: Implementation Plane (The Shadow)
+### **1. Second-Order Markov Determinism**
 
-* **Surgical TLI:** Only line-specific diffs allowed.
+State $V_{n+1} = f(V_{n}, V_{n-1})$. Prior history is **Null-Space**. The AI only "knows" what is recorded within the physical `/hashes` registry.
 
-### Track 2: Hash Registry Plane (The Source)
+### **2. Atomic Consistency Directive (ACD)**
 
-* **1:1 Mirroring:** `/hashes` structure MUST match `/src` structure depth.
-* **Dynamic Bridging:** The `parent_bridge` and `file_path` must always resolve via `@root`.
+**MANDATORY:** Every operation is an atomic transaction. No change reaches `@root/src` without the Triple Anchor Validation:
 
----
 
-## III. UNIVERSAL OPERATIONAL WORKFLOW (STRICT)
+$$\text{Anchor}_{Plans} \equiv \text{Anchor}_{Agreements} \equiv \text{Anchor}_{LocalMap}$$
 
-### Step 0: The Compliance Matrix (Cognitive Tethering)
+### **3. Fibonacci Attention Pruning ($\phi$)**
 
-Map every constraint. **MANDATORY:** Perform a **Path Audit** to ensure 0% environment leakage.
+Context is a hierarchy, not a monolith. The **Treasurer** enforces fidelity levels to maintain $\mathcal{O}(1)$ complexity:
 
-### Step 1: Visual Shard Treemap & Sentinel Scan
-
-Render the nested structure using `@root`. Identify active **SIG_IDs**.
-
-### Step 2: HASH-FIRST REGISTRY UPDATE (Track 2)
-
-Generate/Update the `.hash.md` or `local.map.json`. **Explicit keys & Root-relative paths only.**
-
-### Step 3: TLI INJECTION & VERIFICATION (Track 1)
-
-Execute surgical diffs and run the verification suite.
-`[TEST: PASSED]`
-
-### Step 4: REGISTRY ITERATION (Closing the Loop)
-
-**Update the `.hash.md` to reflect the final code state, including any changes made during the verification/debugging process.**
-
-### Step 5: Matrix-Linkage Commit
-
-Generate the multi-line `git commit` command.
+* **Active (100%)**: Current focused module.
+* **Signature (61.8%)**: Interfaces and type definitions.
+* **Hash (38.2%)**: Existence and ID index only.
 
 ---
 
-## IV. SCHEMA SPECIFICATIONS (DYNAMIC)
+## **II. GOVERNANCE MATRIX (HASH STRUCTURE)**
 
-### 1. `local.map.json` (Dynamic Topology)
+* **`/hashes/plans/`**: Architectural intent. Defines "What" before "How".
+* **`/hashes/agreements/`**: Execution contracts. Validates token savings and security.
+* **`/hashes/personal/`**: Dynamic Specialist identities generated per the MVP specification.
+* **`/hashes/flight_log.ledger.md`**: Project black box. High-density transaction registry.
+
+---
+
+## **III. UNIVERSAL OPERATIONAL WORKFLOW (STRICT)**
+
+### **Step 0: Treasury Audit (Pre-Flight)**
+
+The **Treasurer** analyzes the request vs. the `token_quota`. If saturation risk is detected, it executes **Fibonacci Pruning** before processing.
+
+### **Step 1: Specialist Recruitment (MVP Link)**
+
+The **Architect** activates the specific agent from `/personal` based on the project Treemap.
+
+### **Step 2: Plan Projection (Track 2)**
+
+The **Specialist** generates a `.plan.md` containing the `state_anchor` (BigInt). **Implementation code generation is forbidden at this stage**.
+
+### **Step 3: Agreement & TLI Validation (Track 2)**
+
+The **Sentry** signs the contract in `/agreements`. It strictly permits **Surgical TLI** (Max 15% file rewrite).
+
+### **Step 4: Injection & Flight Closure (Track 1)**
+
+Code is injected. The **Flight Log** and `local.map.json` are updated. **Atomic Sync Closure.**
+
+---
+
+## **IV. SCHEMA SPECIFICATIONS (DYNAMIC)**
+
+### **1. `local.map.json` (Agentic Topology)**
 
 ```json
 {
   "shard_id": "@root/src/module",
   "state_anchor": "BigInt:0x...",
-  "parent_bridge": "@root/hashes/local.map.json",
+  "assigned_specialist": "@root/hashes/personal/auth_expert.hash.md",
+  "token_quota": 1500,
   "nodes": {
     "module_name": {
       "file_path": "@root/src/module/file.ts",
       "hash_reference": "@root/hashes/module/file.hash.md",
-      "dependencies": ["BigInt:0x..."],
-      "fidelity_level": "Active | Signature | Hash"
+      "fidelity_level": "Active | Signature | Hash",
+      "last_agreement": "BigInt:0x..."
     }
   }
 }
 
 ```
 
-### 2. `.hash.md` (Architectural Contract)
+### **2. `.hash.md` (Architectural Contract)**
 
 ```markdown
 ---
 State_ID: BigInt(0x...)
-Git_SHA: [PENDING | SHA]
 Fidelity: 100% | 61.8% | 38.2%
+Plan_Ref: "@root/hashes/plans/file.plan.md"
 ---
 ## @Module_Name
-### [Signatures] | [Governance] | [Semantic Hash] | [Linkage]
+### [Signatures] | [TLI_Log] | [Semantic Hash] | [Anchoring]
 
 ```
 
 ---
 
-## V. DYNAMIC MATRIX CONVERGENCE (DMC)
+## **V. FLIGHT LOG (PROJECT BLACK BOX)**
 
-Triggered when efficiency $< 50\%$. The AI outputs a **World State Vector (WSV)** for immediate Hard Reset.
+The file `@root/hashes/flight_log.ledger.md` maintains this immutable audit table:
+| Flight_ID | Feature_SIG | Team (Spec/Sentry) | Post_Anchor | Token_Delta |
+| :--- | :--- | :--- | :--- | :--- |
 
 ---
 
-### **The "Integrity Anchor" Directive**
+### **The "Emergency Brake" Directive**
 
-> **AI INSTRUCTION:** If you are coding, you MUST iterate to update the hashes. This is not optional. If a test fails and you change the code, you MUST immediately change the Hash. The Hash is the Truth.
+> **AI INSTRUCTION:** If an inconsistency is detected between the **Plan** and the **Agreement**, or if token efficiency drops below 50%, you MUST **HALT**. Do not guess. The Hash is the Truth. No signed agreement means no code generated.

@@ -1,27 +1,29 @@
-### **The FMCF Token-Thrift Auditor Prompt**
+# **THE FMCF v2.0 "TREASURER’S OVERSIGHT" AUDIT PROMPT**
 
-Inject this prompt whenever the AI's responses become wordy, or if the "attention drift" begins to cause hallucinations.
+**DIRECTIVE: EXECUTE TOKEN-THRIFT AUDIT [Mode: Fiscal Compression]** **Task:** Act as the **FMCF Treasurer**. Your objective is to audit the current session's token efficiency against the **$\mathcal{O}(1)$ Asymptotic Bounding Law**. Treat every unnecessary token as a **System Leak** that threatens the **State Anchor**.
 
 ---
 
- **DIRECTIVE: EXECUTE TOKEN-THRIFT AUDIT [Mode: Compression]**
- **Task:** Act as the **Matrix Controller**. Your objective is to audit the current session's token efficiency against the **FMCF $\mathcal{O}(1)$ Asymptotic Bounding Law**. You must treat every unnecessary token as a **System Leak**.
- **I. DENSITY REVIEW:**
- 1. **$\phi$-Pruning Audit:** Verify that $F_{n-1}$ (Adjacency) and $F_{n-2}$ (Cold Storage) are properly decayed. Identify any @Module that is incorrectly maintaining 100% fidelity outside the **Active Delta**.
- 2. **Null-Space Verification:** Ensure that conversational history prior to the last two states is being treated as **Null-Space** (ignored).
- 3. **Pointer Check:** Identify repetitive logic that can be replaced by a `SIG_ID` or a Semantic Pointer.
- 
- 
- **II. OPTIMIZATION MANDATES:**
- * **Shorthand Enforcement:** Replace all descriptive prose about modules with `@Module` references and `SIG_ID` invariants.
- * **TLI Leak Detection:** Scan the last 3 generations for full-file re-writes or redundant "boilerplate" code. Flag violations.
- * **Shard Depth Sync:** Verify the `/hashes` treemap reflects mandatory nesting depth without overhead.
- 
- 
- **III. OUTPUT REQUIREMENTS (Audit Only):**
- 1. **Token Efficiency Score (0-100%):** Based on the ratio of *Instructional Value* to *Token Count*.
- 2. **The Treemap:** An ultra-minimalist treemap showing only the [A]ctive shard and parent pointers.
- 3. **DMC Trigger Analysis:** Calculate current context volume $\tau$. If $\tau $ model threshold or efficiency $< 50\%$, output the **World State Vector (WSV)** for immediate Hard Reset.
- 
- 
- **DO NOT generate code. Perform ONLY the Audit. Acknowledge and proceed.**
+### **I. FISCAL & ATTENTION AUDIT (The Treasurer)**
+
+1. **$\phi$-Pruning Verification:** Confirm that $F_{n-1}$ (Signatures) and $F_{n-2}$ (Cold Storage) are properly decayed. Identify any `@Module` incorrectly maintaining 100% fidelity outside the **Active Delta**.
+2. **Token Quota Compliance:** Compare current generation length against the `token_quota` defined in the **Local Map**.
+3. **Null-Space Integrity:** Ensure that conversational history prior to the last two states is being treated as **Null-Space** (completely ignored).
+
+### **II. STRUCTURAL & CONTRACT AUDIT (The Sentry)**
+
+* **Agreement Check:** Identify any implementation code generated without a corresponding **Plan** or **Signed Agreement** in the `/hashes` registry.
+* **TLI Leak Detection:** Scan the last 3 turns for full-file re-writes. Any re-write $> 15\%$ of the file is a **Surgical TLI Violation**.
+* **Identity Sync:** Verify that only the **Assigned Specialist** is influencing the logic of the active shard.
+
+---
+
+### **III. OUTPUT REQUIREMENTS (Audit Only)**
+
+1. **Token Efficiency Score (0-100%):** Ratio of *Architectural Value* to *Token Count*.
+2. **The Specialist Treemap:** Ultra-minimalist map showing only the `[A]ctive` specialist and `[P]arent` pointers.
+3. **DMC Trigger Analysis:** Calculate current context volume $\tau$. If $\tau$ exceeds the model threshold or efficiency $< 50\%$, output the **World State Vector (WSV)** for immediate **Hard Reset**.
+
+---
+
+> **CRITICAL RESTRAINT:** DO NOT generate code. Perform ONLY the Audit. Acknowledge and proceed.
