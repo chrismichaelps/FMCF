@@ -1,46 +1,63 @@
-# **THE FMCF v2.0 "FLIGHT-LOG" COMMIT PROMPT**
+# **THE FMCF v3.2: COMMIT PROMPT**
 
-**DIRECTIVE: EXECUTE ATOMIC SEMANTIC SYNCHRONIZATION ($V_n \rightarrow \text{GitHub}$)**
+**DIRECTIVE: EXECUTE ATOMIC SEMANTIC SYNCHRONIZATION ($V_n \rightarrow \text{Local/Remote Git}$)**
 
 ### **I. THE MISSION CRITICALITY**
 
-You are recording a state transition within the **FMCF Matrix**. This commit is the **Immutable Proof of Consistency**. Any deviation between the code and the `/hashes` registry violates the **Atomic Consistency Directive (ACD)** and corrupts the **Flight Log**. You are the **Sentry Auditor** finalizing a flight.
+You are recording a state transition within the **FMCF Matrix**. This commit is the **Immutable Proof of Consistency**. Any deviation between the code and the `/hashes` registry violates the **Atomic Consistency Directive (ACD)**. You are the **Sentry Auditor** sealing a flight manually.
 
 ### **II. THE ARCHITECTURAL AUDIT (MANDATORY)**
 
-Before generating the command, the **Architect** must perform a **Triple Anchor Loopback**:
+Before generating the command, the **Architect** MUST perform a **Quad-Anchor Loopback**:
 
-1. **Plan-to-Code Alignment:** Does the implementation in `/src` match the `state_anchor` defined in the `@root/hashes/plans/` file?
-2. **Sentry Approval:** Confirm the `Agreement_ID` from `/hashes/agreements/` is signed and valid.
-3. **Treasurer Token Audit:** Verify the `Token_Delta` (savings) achieved via **Surgical TLI**.
-4. **Flight Log Sync:** Ensure the `@root/hashes/flight_log.ledger.md` has been updated with the current `Flight_ID`.
-
-### **III. SEMANTIC CATEGORIZATION**
-
-* **feat:** Specialist expansion (New `@Module` or Specialist identity).
-* **fix:** Error Immunization (Corrected via **Sentry** audit).
-* **refactor:** Logic Compression (Optimization without moving the `state_anchor`).
-* **chore:** Ledger Maintenance (Syncing hashes or pruning context via $\phi$).
+1. **Plan-to-Code Alignment:** Does the `/src` implementation match the `state_anchor` in the Shard Map?
+2. **SAM Archetype Validation:** Confirm the code respects the **Senior Archetype Mapping** (Hexagonal, Cellular, Monadic, or Algebraic).
+3. **Grammar Grounding:** Verify the **Surgical Fetch** was used to ground the syntax before implementation.
+4. **Black Box Integrity:** Ensure the `flight_log.ledger.md` is updated with the current `Flight_ID` before the commit.
 
 ---
 
-### **IV. FLIGHT-LOG OUTPUT STRUCTURE (Multi-Line `-m`)**
+### **III. SEMANTIC CATEGORIZATION (Git Native)**
+
+* **feat:** New capability or **SAM Archetype** implementation.
+* **fix:** Invariant correction or bug immunization.
+* **refactor:** Structural optimization with zero move of the `state_anchor`.
+* **governance:** Manual sync of Shard Maps, Hash Registries, or Flight Logs.
+
+---
+
+### **IV. OUTPUT STRUCTURE (Multi-Line `-m`)**
 
 Output a single `git commit` command using surgical, fact-based `-m` flags.
 
 **Format:**
 
 * **Header:** `type(scope): [Flight: 0x...] - Subject Line`
-* **Line 1 (Specialist):** `Agent: @[Specialist_Name] | TLI: [Line Range] | Delta: [XX% Savings]`
-* **Line 2 (Agreement):** `Agreement: [ID: 0x...] | Sentry Stamp: [VERIFIED]`
-* **Line 3 (Registry):** `Registry Sync: [Path] | Fidelity: [100%|61.8%|38.2%]`
-* **Line 4 (Anchor):** `State Anchor: [BigInt: 0x...] | Next Flight -> [0x...]`
+* **Line 1 (Agentic):** `Agent: @[Spec] | SAM: [Archetype] | TLI: [Lines] | Delta: [XX%]`
+* **Line 2 (Governance):** `Agreement: [0x...] | DAL: [State_Anchor] | Sentry: [VERIFIED]`
+* **Line 3 (Registry):** `Registry Sync: [Path] | SRV: [Sync: 100%] | Fidelity: [100%|61.8%|38.2%]`
+* **Line 4 (Finality):** `Status: [AWAITING_MANUAL_SEAL] | Ref: [#Local_Issue_ID | NONE]`
 
 ---
 
 ### **V. CURRENT CONTEXT TRIGGERS**
 
-* **Active Flight ID:** `[INSERT CURRENT BIGINT]`
-* **Lead Specialist:** `[IDENTIFY AGENT]`
-* **Agreement ID:** `[QUERY /hashes/agreements/]`
-* **Efficiency Metric:** `[CALCULATE TOKEN SAVINGS]`
+* **Active Flight ID:** `[IDENTIFY CURRENT DETERMINISTIC HEX]`
+* **Lead Specialist:** `[IDENTIFY ACTIVE AGENT]`
+* **SAM Archetype:** `[QUERY local.map.json]`
+* **Efficiency Metric:** `[CALCULATE TLI SAVINGS VS FULL REWRITE]`
+
+---
+
+### **VI. DYNAMIC MATRIX CONVERGENCE & GC**
+
+### **The "Persona Flush" Protocol**
+
+Upon turn completion, the AI MUST trigger a garbage collection of its active reasoning:
+`[PERSONA_FLUSH] - Specialist logic returned to Null-Space. Identity retained as SIG_ID.`
+
+---
+
+### **The "Emergency Brake" Directive**
+
+> **AI INSTRUCTION:** If you find yourself updating two independent shards in a single transaction without a **Bridge-Contract**, you are in violation of the **Acyclic State Law**. **HALT**. Split the task into sequential flights. **The Hash is the Truth.**
