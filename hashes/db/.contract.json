@@ -1,0 +1,40 @@
+{
+  "shard_id": "@root/packages/auth/src/UserRepo.ts",
+  "state_anchor": "BigInt:0x1",
+  "fidelity_level": "Signature",
+  "complexity": "O(log n) — B-tree index on email column",
+  "inputs": [
+    {
+      "name": "email",
+      "type": "string",
+      "source": "AuthService"
+    },
+    {
+      "name": "createData",
+      "type": "{ email: string, passwordHash: HashedPassword }",
+      "source": "AuthService"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "findByEmail",
+      "type": "Option<User>",
+      "note": "None if not found"
+    },
+    {
+      "name": "create",
+      "type": "User",
+      "note": "Full user record after insert"
+    }
+  ],
+  "db_constraints": [
+    "users.email: UNIQUE NOT NULL",
+    "users.id: UUID PRIMARY KEY DEFAULT gen_random_uuid()",
+    "users.created_at: TIMESTAMPTZ DEFAULT now()"
+  ],
+  "error_surface": [
+    "DbConnectionError",
+    "DuplicateEmailError"
+  ],
+  "grammar_lock": "@root/hashes/grammar/effect.hash.md"
+}

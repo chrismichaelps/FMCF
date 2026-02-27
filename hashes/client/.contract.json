@@ -1,0 +1,41 @@
+{
+  "shard_id": "@root/packages/client",
+  "state_anchor": "BigInt:0x5",
+  "grammar_ref": "@root/hashes/grammar/typescript.hash.md",
+  "exports": {
+    "App": {
+      "signature": "() => JSX.Element",
+      "complexity": "O(1)",
+      "description": "Root React component — renders AuthForm when idle, Dashboard stub when authenticated."
+    },
+    "AuthForm": {
+      "signature": "(props: { mode: 'signup' | 'login'; onSuccess: (r: AuthResponse) => void }) => JSX.Element",
+      "complexity": "O(1)",
+      "description": "Controlled form with email/password inputs and inline error display."
+    },
+    "useAuthStore": {
+      "signature": "() => { state: AuthState; setAuthenticated: (r: AuthResponse) => void; logout: () => void }",
+      "complexity": "O(1)",
+      "description": "Minimal React useState hook for auth state management."
+    }
+  },
+  "api_client": {
+    "signUp": {
+      "signature": "(email: string, password: string) => Promise<AuthResponse>",
+      "complexity": "O(1) network",
+      "throws": "ApiError { status: number; message: string }",
+      "endpoint": "POST /auth/signup",
+      "success_status": 201
+    },
+    "login": {
+      "signature": "(email: string, password: string) => Promise<AuthResponse>",
+      "complexity": "O(1) network",
+      "throws": "ApiError { status: number; message: string }",
+      "endpoint": "POST /auth/login",
+      "success_status": 200
+    }
+  },
+  "dependencies": [
+    "@root/hashes/domain/.contract.json"
+  ]
+}

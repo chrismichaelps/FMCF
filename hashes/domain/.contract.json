@@ -1,0 +1,39 @@
+{
+  "shard_id": "@root/packages/domain",
+  "state_anchor": "BigInt:0x1",
+  "fidelity_level": "Signature",
+  "complexity": "O(1)",
+  "inputs": [
+    {
+      "name": "rawJson",
+      "type": "unknown",
+      "source": "HTTP request body"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "User",
+      "type": "Schema.Schema.Type<typeof UserSchema>",
+      "branded": true
+    },
+    {
+      "name": "LoginPayload",
+      "type": "Schema.Schema.Type<typeof LoginPayload>",
+      "branded": false
+    },
+    {
+      "name": "AuthResponse",
+      "type": "Schema.Schema.Type<typeof AuthResponse>",
+      "branded": false
+    }
+  ],
+  "contracts": [
+    "Schema.decodeUnknown(UserSchema)(raw) -> Effect<User, ParseError>",
+    "Schema.encode(AuthResponse)(user) -> Effect<AuthResponse, ParseError>",
+    "AuthResponse MUST NOT contain passwordHash field"
+  ],
+  "error_surface": [
+    "ParseError (Schema mismatch)"
+  ],
+  "grammar_lock": "@root/hashes/grammar/effect.hash.md"
+}

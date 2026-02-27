@@ -1,0 +1,41 @@
+{
+  "shard_id": "@root/packages/api",
+  "state_anchor": "BigInt:0x1",
+  "fidelity_level": "Signature",
+  "complexity": "O(1) routing dispatch",
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/auth/signup",
+      "handler": "AuthService.signUp",
+      "status_success": 201
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "handler": "AuthService.login",
+      "status_success": 200
+    }
+  ],
+  "inputs": [
+    {
+      "name": "rawBody",
+      "type": "unknown",
+      "decoded_via": "Schema.decodeUnknown(LoginPayload)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "AuthResponse",
+      "type": "Schema.Schema.Type<typeof AuthResponse>",
+      "encoded_via": "Schema.encode(AuthResponse)"
+    }
+  ],
+  "error_http_map": {
+    "ValidationError": 400,
+    "DuplicateEmailError": 409,
+    "InvalidCredentialsError": 401,
+    "DbConnectionError": 503
+  },
+  "grammar_lock": "@root/hashes/grammar/effect.hash.md"
+}

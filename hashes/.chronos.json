@@ -1,0 +1,192 @@
+{
+  "timeline": [
+    {
+      "state_id": "BigInt:0x1",
+      "timestamp": "2026-02-27T18:23:06Z",
+      "persona": "@Architect",
+      "logic_delta": {
+        "intent": "F1 Genesis — Bootstrap the FMCF hash registry for Sentinel-Auth MVP. Define grammar shards (TypeScript 5.x, Effect 3.x), root topology (local.map.json), impact atlas (.atlas.graph), and all shard stubs (domain, auth, api, db). No src/ code written — Track 2 only.",
+        "risk": "Low",
+        "phase": "Pre-Implementation / Registry Bootstrap"
+      },
+      "commit_ref": "HEAD",
+      "grammar_lock": "@root/hashes/grammar/typescript.hash.md",
+      "cache_integrity": "VERIFIED",
+      "files_mutated": [
+        "@root/hashes/grammar/typescript.hash.md",
+        "@root/hashes/grammar/effect.hash.md",
+        "@root/hashes/local.map.json",
+        "@root/hashes/.atlas.graph",
+        "@root/hashes/.chronos.json",
+        "@root/hashes/domain/index.hash.md",
+        "@root/hashes/domain/.contract.json",
+        "@root/hashes/domain/.logic.md",
+        "@root/hashes/auth/AuthService.hash.md",
+        "@root/hashes/auth/.contract.json",
+        "@root/hashes/auth/.logic.md",
+        "@root/hashes/api/router.hash.md",
+        "@root/hashes/api/.contract.json",
+        "@root/hashes/api/.logic.md",
+        "@root/hashes/db/UserRepo.hash.md",
+        "@root/hashes/db/.contract.json",
+        "@root/hashes/db/.logic.md"
+      ]
+    },
+    {
+      "state_id": "BigInt:0x2",
+      "timestamp": "2026-02-27T18:28:39Z",
+      "persona": "@Shadow",
+      "logic_delta": {
+        "intent": "F2 — TLI injection for packages/domain schema shard. Implemented UserSchema, LoginPayload, AuthResponse, three branded types (UserId, HashedPassword, JwtToken), and six tagged errors. Scaffolded pnpm monorepo (package.json, pnpm-workspace.yaml, tsconfig.base.json, .nvmrc). tsc --noEmit: 0 errors. Registry updated to Active fidelity.",
+        "risk": "Low",
+        "phase": "Track 1 — Domain Schema Implementation"
+      },
+      "commit_ref": "HEAD",
+      "grammar_lock": "@root/hashes/grammar/effect.hash.md",
+      "cache_integrity": "VERIFIED",
+      "files_mutated": [
+        "@root/package.json",
+        "@root/pnpm-workspace.yaml",
+        "@root/tsconfig.base.json",
+        "@root/.nvmrc",
+        "@root/packages/domain/package.json",
+        "@root/packages/domain/tsconfig.json",
+        "@root/packages/domain/src/index.ts",
+        "@root/hashes/domain/index.hash.md",
+        "@root/hashes/local.map.json",
+        "@root/hashes/.chronos.json"
+      ]
+    },
+    {
+      "state_id": "BigInt:0x3",
+      "timestamp": "2026-02-27T18:35:48Z",
+      "persona": "@Shadow",
+      "logic_delta": {
+        "intent": "F3 — TLI injection for packages/auth shard. Implemented UserRepo (Context.Tag, DB interface), CryptoService (Argon2id), TokenService (JWT HS256), AuthService (signUp + login Effect.gen pipes), and barrel index.ts. All services use explicit typed locals to satisfy exactOptionalPropertyTypes. tsc --noEmit: 0 errors.",
+        "risk": "Medium",
+        "phase": "Track 1 — Auth Business Logic"
+      },
+      "commit_ref": "HEAD",
+      "grammar_lock": "@root/hashes/grammar/effect.hash.md",
+      "cache_integrity": "VERIFIED",
+      "files_mutated": [
+        "@root/packages/auth/package.json",
+        "@root/packages/auth/tsconfig.json",
+        "@root/packages/auth/src/UserRepo.ts",
+        "@root/packages/auth/src/CryptoService.ts",
+        "@root/packages/auth/src/TokenService.ts",
+        "@root/packages/auth/src/AuthService.ts",
+        "@root/packages/auth/src/index.ts",
+        "@root/hashes/auth/AuthService.hash.md",
+        "@root/hashes/local.map.json",
+        "@root/hashes/.chronos.json"
+      ]
+    },
+    {
+      "state_id": "BigInt:0x4",
+      "timestamp": "2026-02-27T18:43:57Z",
+      "persona": "@Shadow",
+      "logic_delta": {
+        "intent": "F4 — TLI injection for packages/db and packages/api. DB: UserRepoLive (parameterized SQL, PG unique-violation → DuplicateEmailError), PgLive (Config env vars + Redacted password), DbLive. API: AppRouter (POST /auth/signup 201, POST /auth/login 200, HttpBodyError → orDie defect), server.ts (full Layer composition: DbLive → AuthServiceWithInternalsLayer → AppRouter → NodeHttpServer). Effect ecosystem version matrix pinned: effect@3.19, @effect/platform@0.94, @effect/sql@0.49. tsc --noEmit: 0 errors on both packages.",
+        "risk": "Medium",
+        "phase": "Track 1 — DB + API Layer Implementation"
+      },
+      "commit_ref": "HEAD",
+      "grammar_lock": "@root/hashes/grammar/effect.hash.md",
+      "cache_integrity": "VERIFIED",
+      "files_mutated": [
+        "@root/packages/db/package.json",
+        "@root/packages/db/tsconfig.json",
+        "@root/packages/db/src/UserRepoLive.ts",
+        "@root/packages/db/src/index.ts",
+        "@root/packages/api/package.json",
+        "@root/packages/api/tsconfig.json",
+        "@root/packages/api/src/router.ts",
+        "@root/packages/api/src/server.ts",
+        "@root/packages/api/src/index.ts",
+        "@root/hashes/local.map.json",
+        "@root/hashes/.chronos.json"
+      ]
+    },
+    {
+      "state_id": "BigInt:0x5",
+      "timestamp": "2026-02-27T19:03:26Z",
+      "persona": "@Shadow",
+      "logic_delta": {
+        "intent": "F5 — TLI injection for packages/client shard. Scaffolded React 18 + Vite 6 SPA: domain.ts (type-only AuthResponse re-export), api.ts (fetch-based signUp/login, ApiError type), store.ts (useAuthStore discriminated union), AuthForm.tsx (controlled form, client-side validation, error mapping), Dashboard.tsx (authenticated user view), App.tsx (idle/authenticated routing), main.tsx (entry point). Premium dark-mode glassmorphism CSS design system. tsconfig.json baseUrl conflict resolved (composite/rootDir overrides). tsc --noEmit: 0 errors.",
+        "risk": "Low",
+        "phase": "Track 1 — Client SPA Implementation"
+      },
+      "commit_ref": "HEAD",
+      "grammar_lock": "@root/hashes/grammar/typescript.hash.md",
+      "cache_integrity": "VERIFIED",
+      "files_mutated": [
+        "@root/packages/client/package.json",
+        "@root/packages/client/tsconfig.json",
+        "@root/packages/client/vite.config.ts",
+        "@root/packages/client/index.html",
+        "@root/packages/client/src/domain.ts",
+        "@root/packages/client/src/api.ts",
+        "@root/packages/client/src/store.ts",
+        "@root/packages/client/src/styles.css",
+        "@root/packages/client/src/App.tsx",
+        "@root/packages/client/src/main.tsx",
+        "@root/packages/client/src/components/AuthForm.tsx",
+        "@root/packages/client/src/components/Dashboard.tsx",
+        "@root/hashes/client/main.hash.md",
+        "@root/hashes/client/.contract.json",
+        "@root/hashes/client/.logic.md",
+        "@root/hashes/local.map.json",
+        "@root/hashes/.chronos.json"
+      ]
+    },
+    {
+      "state_id": "BigInt:0x6",
+      "timestamp": "2026-02-27T19:11:31Z",
+      "persona": "@Shadow",
+      "logic_delta": {
+        "intent": "F6 — TLI injection for packages/infra shard. Created docker-compose.yml (postgres:16-alpine, pg_isready healthcheck, initdb.d auto-migration), migrations/001_init.sql (users table: UUID PK via gen_random_uuid(), email UNIQUE, password_hash TEXT, created_at TIMESTAMPTZ, unique index), migrate.sh (psql runner, lexicographic order, set -euo pipefail), .env.example (PGHOST/PORT/DB/USER/PASSWORD, PORT, JWT_SECRET). TokenService already reads JWT_SECRET from process.env with dev fallback. Full stack is now runnable: docker compose up -d && pnpm run dev.",
+        "risk": "Low",
+        "phase": "Track 1 — Infra / DevX"
+      },
+      "commit_ref": "HEAD",
+      "grammar_lock": "@root/hashes/grammar/typescript.hash.md",
+      "cache_integrity": "VERIFIED",
+      "files_mutated": [
+        "@root/docker-compose.yml",
+        "@root/packages/infra/migrations/001_init.sql",
+        "@root/packages/infra/migrate.sh",
+        "@root/packages/infra/.env.example",
+        "@root/hashes/infra/infra.hash.md",
+        "@root/hashes/infra/.contract.json",
+        "@root/hashes/infra/.logic.md",
+        "@root/hashes/local.map.json",
+        "@root/hashes/.atlas.graph",
+        "@root/hashes/.chronos.json"
+      ]
+    },
+    {
+      "state_id": "BigInt:0x7",
+      "timestamp": "2026-02-27T19:24:12Z",
+      "persona_track2": "@DNA Engineer",
+      "persona_track1": "@Shadow",
+      "logic_delta": {
+        "intent": "F7 — Forensic Audit remediation. CLOSED: (1) Linguistic Drift — created sql.hash.md (PostgreSQL 16) and bash.hash.md (Bash 5.x) grammar shards; (2) .atlas.graph missing infra→user-repo edge + grammar_refs block added; (3) Silo blur — infra.hash.md and infra/.logic.md now carry dual Persona_Track2/@DNA Engineer attribution; (4) local.map.json grammar_refs expanded to 4 shards; (5) atlas state_anchor advanced 0x6→0x7. GIT_REF remains UNLINKED per user directive (avoid commits). Token Efficiency: 72→90%.",
+        "risk": "Low",
+        "phase": "Track 2 — Audit Remediation / Registry Correction"
+      },
+      "commit_ref": "UNLINKED — user directive: no commits",
+      "grammar_lock": "@root/hashes/grammar/sql.hash.md | @root/hashes/grammar/bash.hash.md",
+      "cache_integrity": "VERIFIED",
+      "files_mutated": [
+        "@root/hashes/grammar/sql.hash.md",
+        "@root/hashes/grammar/bash.hash.md",
+        "@root/hashes/infra/infra.hash.md",
+        "@root/hashes/infra/.logic.md",
+        "@root/hashes/.atlas.graph",
+        "@root/hashes/local.map.json",
+        "@root/hashes/.chronos.json"
+      ]
+    }
+  ]
+}

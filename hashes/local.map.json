@@ -1,0 +1,124 @@
+{
+  "shard_id": "@root",
+  "project": "sentinel-auth-mvp",
+  "state_anchor": "BigInt:0x7",
+  "parent_bridge": "@root/hashes/local.map.json",
+  "git_anchor": "HEAD",
+  "cache_integrity": "VERIFIED",
+  "grammar_refs": {
+    "typescript": "@root/hashes/grammar/typescript.hash.md",
+    "effect": "@root/hashes/grammar/effect.hash.md",
+    "sql": "@root/hashes/grammar/sql.hash.md",
+    "bash": "@root/hashes/grammar/bash.hash.md"
+  },
+  "nodes": {
+    "domain": {
+      "file_path": "@root/packages/domain/src/index.ts",
+      "hash_reference": "@root/hashes/domain/index.hash.md",
+      "contract": "@root/hashes/domain/.contract.json",
+      "logic": "@root/hashes/domain/.logic.md",
+      "grammar_ref": "@root/hashes/grammar/effect.hash.md",
+      "dependencies": [],
+      "fidelity_level": "Active",
+      "exports": [
+        "UserSchema",
+        "User",
+        "LoginPayload",
+        "AuthResponse",
+        "UserId",
+        "HashedPassword",
+        "JwtToken",
+        "ValidationError",
+        "DuplicateEmailError",
+        "InvalidCredentialsError",
+        "DbConnectionError",
+        "CryptoError",
+        "TokenError"
+      ]
+    },
+    "auth-service": {
+      "file_path": "@root/packages/auth/src/AuthService.ts",
+      "hash_reference": "@root/hashes/auth/AuthService.hash.md",
+      "contract": "@root/hashes/auth/.contract.json",
+      "logic": "@root/hashes/auth/.logic.md",
+      "grammar_ref": "@root/hashes/grammar/effect.hash.md",
+      "dependencies": [
+        "@root/hashes/domain/.contract.json",
+        "@root/hashes/db/.contract.json"
+      ],
+      "fidelity_level": "Active",
+      "exports": [
+        "AuthService",
+        "AuthServiceLive",
+        "AuthServiceWithInternalsLayer",
+        "UserRepo",
+        "CryptoService",
+        "CryptoServiceLive",
+        "TokenService",
+        "TokenServiceLive"
+      ]
+    },
+    "user-repo": {
+      "file_path": "@root/packages/auth/src/UserRepo.ts",
+      "hash_reference": "@root/hashes/db/UserRepo.hash.md",
+      "contract": "@root/hashes/db/.contract.json",
+      "logic": "@root/hashes/db/.logic.md",
+      "grammar_ref": "@root/hashes/grammar/effect.hash.md",
+      "dependencies": [
+        "@root/hashes/domain/.contract.json"
+      ],
+      "fidelity_level": "Active",
+      "exports": [
+        "UserRepo"
+      ]
+    },
+    "api": {
+      "file_path": "@root/packages/api/src/router.ts",
+      "hash_reference": "@root/hashes/api/router.hash.md",
+      "contract": "@root/hashes/api/.contract.json",
+      "logic": "@root/hashes/api/.logic.md",
+      "grammar_ref": "@root/hashes/grammar/effect.hash.md",
+      "dependencies": [
+        "@root/hashes/auth/.contract.json",
+        "@root/hashes/domain/.contract.json"
+      ],
+      "fidelity_level": "Active",
+      "exports": [
+        "AppRouter"
+      ]
+    },
+    "client": {
+      "file_path": "@root/packages/client/src/main.tsx",
+      "hash_reference": "@root/hashes/client/main.hash.md",
+      "contract": "@root/hashes/client/.contract.json",
+      "logic": "@root/hashes/client/.logic.md",
+      "grammar_ref": "@root/hashes/grammar/typescript.hash.md",
+      "dependencies": [
+        "@root/hashes/domain/.contract.json"
+      ],
+      "fidelity_level": "Active",
+      "exports": [
+        "App",
+        "AuthForm",
+        "useAuthStore"
+      ]
+    },
+    "infra": {
+      "file_path": "@root/packages/infra/migrations/001_init.sql",
+      "hash_reference": "@root/hashes/infra/infra.hash.md",
+      "contract": "@root/hashes/infra/.contract.json",
+      "logic": "@root/hashes/infra/.logic.md",
+      "grammar_ref": "@root/hashes/grammar/typescript.hash.md",
+      "dependencies": [
+        "@root/hashes/db/.contract.json"
+      ],
+      "fidelity_level": "Active",
+      "exports": [
+        "001_init.sql",
+        "migrate.sh",
+        "docker-compose.yml",
+        ".env.example"
+      ]
+    }
+  }
+}

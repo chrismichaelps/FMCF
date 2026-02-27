@@ -1,0 +1,63 @@
+{
+  "graph_version": "1.0",
+  "state_anchor": "BigInt:0x7",
+  "description": "Impact radius map — directional dependency edges. When a upstream node changes, all downstream nodes are flagged DIRTY.",
+  "grammar_refs": {
+    "typescript": "@root/hashes/grammar/typescript.hash.md",
+    "effect":     "@root/hashes/grammar/effect.hash.md",
+    "sql":        "@root/hashes/grammar/sql.hash.md",
+    "bash":       "@root/hashes/grammar/bash.hash.md"
+  },
+  "edges": [
+    {
+      "from": "domain",
+      "to": "auth-service",
+      "type": "SCHEMA_CONTRACT",
+      "impact": "HIGH",
+      "reason": "AuthService consumes UserSchema, LoginPayload, AuthResponse"
+    },
+    {
+      "from": "domain",
+      "to": "user-repo",
+      "type": "SCHEMA_CONTRACT",
+      "impact": "HIGH",
+      "reason": "UserRepo maps DB rows to domain User type"
+    },
+    {
+      "from": "domain",
+      "to": "api",
+      "type": "SCHEMA_CONTRACT",
+      "impact": "MEDIUM",
+      "reason": "API router uses LoginPayload and AuthResponse for encode/decode"
+    },
+    {
+      "from": "domain",
+      "to": "client",
+      "type": "SCHEMA_CONTRACT",
+      "impact": "MEDIUM",
+      "reason": "Client uses AuthResponse shape for UI rendering"
+    },
+    {
+      "from": "user-repo",
+      "to": "auth-service",
+      "type": "LAYER_DEPENDENCY",
+      "impact": "HIGH",
+      "reason": "AuthService requires UserRepo Layer for DB operations"
+    },
+    {
+      "from": "auth-service",
+      "to": "api",
+      "type": "LAYER_DEPENDENCY",
+      "impact": "HIGH",
+      "reason": "API router requires AuthService Layer for route handlers"
+    },
+    {
+      "from": "infra",
+      "to": "user-repo",
+      "type": "SCHEMA_CONTRACT",
+      "impact": "HIGH",
+      "reason": "001_init.sql DDL defines the users table columns consumed by UserRepoLive"
+    }
+  ],
+  "dirty_propagation_rule": "When a node's fidelity_level changes to DIRTY, recursively mark all nodes reachable via outgoing edges as DIRTY"
+}

@@ -1,0 +1,26 @@
+{
+  "shard_id": "@root/packages/infra",
+  "state_anchor": "BigInt:0x6",
+  "grammar_ref": "@root/hashes/grammar/typescript.hash.md",
+  "artefacts": {
+    "docker-compose.yml": {
+      "description": "Spins up postgres:16-alpine on port 5432 with sentinel DB + health-check",
+      "complexity": "O(1) startup"
+    },
+    "migrations/001_init.sql": {
+      "description": "DDL for users table matching UserRepoLive.ts column expectations",
+      "complexity": "O(1) — idempotent via CREATE TABLE IF NOT EXISTS"
+    },
+    ".env.example": {
+      "description": "All required env vars for API server (PGHOST, PGPORT, PGDATABASE, PGUSER, PGPASSWORD, JWT_SECRET)",
+      "complexity": "O(1)"
+    },
+    "migrate.sh": {
+      "description": "Applies all migrations/* SQL files in order using psql",
+      "complexity": "O(n) migrations"
+    }
+  },
+  "dependencies": [
+    "@root/hashes/db/.contract.json"
+  ]
+}

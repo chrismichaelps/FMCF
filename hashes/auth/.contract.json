@@ -1,0 +1,42 @@
+{
+  "shard_id": "@root/packages/auth",
+  "state_anchor": "BigInt:0x1",
+  "fidelity_level": "Signature",
+  "complexity": "O(n) where n = DB query time",
+  "inputs": [
+    {
+      "name": "signUpPayload",
+      "type": "LoginPayload",
+      "source": "API router after schema decode"
+    },
+    {
+      "name": "loginPayload",
+      "type": "LoginPayload",
+      "source": "API router after schema decode"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "authResponse",
+      "type": "AuthResponse",
+      "note": "JWT token + public user fields"
+    }
+  ],
+  "dependencies": [
+    "UserRepo (Context.Tag)",
+    "CryptoService (Context.Tag — Argon2 hashing)",
+    "TokenService (Context.Tag — JWT signing)"
+  ],
+  "contracts": [
+    "signUp: LoginPayload -> Effect<AuthResponse, ValidationError | DuplicateEmailError | DbConnectionError | CryptoError>",
+    "login: LoginPayload -> Effect<AuthResponse, ValidationError | InvalidCredentialsError | DbConnectionError>"
+  ],
+  "error_surface": [
+    "ValidationError",
+    "DuplicateEmailError",
+    "DbConnectionError",
+    "CryptoError",
+    "InvalidCredentialsError"
+  ],
+  "grammar_lock": "@root/hashes/grammar/effect.hash.md"
+}
