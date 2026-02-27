@@ -1,4 +1,8 @@
 
+<p align="center">
+  <img src="./public/fmcf_token_leakage_diagram.png" alt="FMCF Token Leakage Diagram" width="50%" />
+</p>
+
 <p align="center">Bounding LLM Context Toxicity: The Fibonacci
 Matrix Context Flow (FMCF) for Infinite-Scale
 Agentic Workflows</p>
