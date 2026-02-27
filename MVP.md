@@ -1,7 +1,3 @@
-This is the **Ultra-Senior Technical Specification** for the **Sentinel-Auth MVP**, translated and refined for the English-speaking technical domain. By using `import { Schema, pipe } from "effect"`, we are moving away from traditional defensive programming toward a **Type-First, Schema-Driven** architecture where the compiler itself acts as the primary auditor.
-
----
-
 Important: For better undestanding in how the effect library works check: `effect-library-lms-full.txt`
 
 # 🚀 Technical Specification: Sentinel-Auth MVP (Effect Edition)
