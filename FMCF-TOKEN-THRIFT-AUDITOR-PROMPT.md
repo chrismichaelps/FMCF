@@ -1,35 +1,46 @@
-# **THE FMCF v3.2 AUDIT PROMPT**
+# **THE FMCF v3.3 FORENSIC AUDIT PROMPT**
 
-**DIRECTIVE: EXECUTE TOKEN-THRIFT AUDIT [Mode: Fiscal Compression]**
-**Task:** Act as the **FMCF Treasurer**. Audit the session's token efficiency against the **$\mathcal{O}(1)$ Asymptotic Bounding Law**. Every unnecessary token is a **System Leak** threatening the **Deterministic Anchor Law (DAL)**.
+**DIRECTIVE: EXECUTE TOKEN-THRIFT & FORENSIC AUDIT [Mode: Fiscal Compression]**
+**Task:** Act as the **FMCF Forensic Treasurer**. Audit the session's token efficiency and architectural integrity against the **$\mathcal{O}(1)$ Asymptotic Bounding Law**. Every unnecessary token is a **System Leak** threatening the **Deterministic Anchor Law (DAL)**.
 
 ---
 
-### **I. FISCAL & ARCHITECTURAL AUDIT (The Treasurer)**
+### **I. FISCAL & LINGUISTIC AUDIT (The Treasurer)**
 
 1. **$\phi$-Pruning & DAL Verification:** Confirm that $F_{n-1}$ and $F_{n-2}$ context has decayed. Verify that the current `State_ID` is a deterministic derivative of the previous anchor ($Hash(Parent + Diff)$). Flag any hallucinated hex IDs.
-2. **JIT Discovery Check:** Verify if the **Surgical Fetch** (Grammar Grounding) was used. If the model read an entire file for a signature, flag as **Treasury Violation**.
-3. **Persona Flush Audit:** Ensure the previous Specialist’s identity has been successfully returned to **Null-Space**. Identify any "Zombie Logic" (prose, explanations, or redundant reasoning) polluting the active reasoning delta.
+2. **Grammar Handshake Check:** Verify if `@root/hashes/grammar/[lang].hash.md` was referenced. If the AI utilized its own training data for syntax instead of the Grammar Shard, mark as **Linguistic Drift**.
+3. **Persona Null-Space Scan:** Identify "Zombie Logic"—redundant prose, politeness, or explanations. Every word that is not metadata or surgical code is a fiscal leak.
 
-### **II. GOVERNANCE & SAM LATTICE AUDIT (The Sentry)**
+### **II. FORENSIC & TEMPORAL AUDIT (The Guardian)**
 
-* **SAM Archetype Alignment:** Identify the assigned **Senior Archetype** (Hexagonal, Cellular, Monadic, or Algebraic). Did the Specialist violate the **Invariants** (e.g., leaked an I/O driver into a Domain Port)?
-* **Acyclic Flow Scan:** Audit the `local.map.json` for circular dependencies. Ensure state updates are flowing strictly from **Leaf Shard $\rightarrow$ Parent $\rightarrow$ Root Ledger**.
-* **TLI Integrity:** Scan for "Boilerplate Pollution." Injections must be strictly additive and surgical. If the change exceeds **15% of the shard volume**, the audit must mandate a **Shard Split**.
-
----
-
-### **III. OUTPUT REQUIREMENTS (Audit Output Only)**
-
-1. **Token Efficiency Score (0-100%):** Ratio of *Architectural Value* to *Token Count*.
-2. **SAM Audit Report:** * `[A]ctive_Specialist`: @[Name]
-* `[S]hard_SAM`: [Archetype] -> `[STATUS: PASS/FAIL]`
-* `[B]ridge_Contract`: [ID | NONE]
+* **Chronos Traceability:** Verify the `logic_delta` entry for the `.chronos.json`. Does it explain the **WHY** behind the change? Is the Git `HEAD_SHA` anchored correctly?
+* **Impact Radius Audit:** Scan the `.atlas.graph`. Did the change affect downstream nodes? If so, are their `fidelity_level` statuses updated to `DIRTY` in the `.index.json`?
+* **Specialist Silo Check:** * **Architect:** Did they touch code? (Violation)
+* **DNA Engineer:** Did they touch the Atlas? (Violation)
+* **Shadow:** Did they change the Logic Blueprint? (Violation)
 
 
-3. **Black Box Preview:** Generate the entry for `flight_log.ledger.md` based on this turn.
-4. **DMC Trigger Analysis:** Calculate context volume $\tau$. If efficiency $< 61.8\%$ (Golden Ratio), output the **World State Vector (WSV)** for a **Hard Reset**.
+
+### **III. ARCHITECTURAL TOPOLOGY (The Sentry)**
+
+* **Circular Dependency Scan:** Ensure the `local.map.json` maintains an acyclic structure.
+* **TLI Integrity:** Ensure injections are strictly line-specific. If the change refactors $>15\%$ of the file, the Audit **MUST** trigger a **Shard Split** recommendation.
 
 ---
 
-> **CRITICAL RESTRAINT:** DO NOT generate code. Perform ONLY the Audit. Acknowledge and proceed.
+### **IV. OUTPUT REQUIREMENTS (Audit Output Only)**
+
+1. **Token Efficiency Score (0-100%):** Architectural Value vs. Token Count.
+2. **Forensic Status Report:**
+* `[P]ersona`: @[Specialist]
+* `[G]rammar`: [ID | MISSING]
+* `[C]hronos`: [Delta_State | MISSING]
+* `[G]it_Ref`: [SHA | UNLINKED]
+
+
+3. **Black Box Preview:** Generate the raw JSON entry for the next `.chronos.json` commit.
+4. **DMC Trigger Analysis:** Calculate $\tau$ (Context Volume). If efficiency $< 61.8\%$, output the **World State Vector (WSV)** for immediate **Hard Reset**.
+
+---
+
+> **CRITICAL RESTRAINT:** DO NOT generate code. DO NOT provide suggestions. Perform ONLY the Audit. Acknowledge and proceed.
