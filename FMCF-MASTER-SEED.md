@@ -126,13 +126,25 @@ Version: [e.g., 5.x | 1.75 | 0.8.20]
 Fidelity: 100% (Static Reference)
 ---
 ## [Syntax_Rules]
-- (Pattern 1: e.g., Strict Null Checks)
-- (Pattern 2: e.g., Functional composition over classes)
+- (e.g., Strict Null Checks)
+- (e.g., Functional composition over classes)
+
+## [Naming_Conventions]
+- (e.g., camelCase for variables, PascalCase for components)
+
+## [Import_Order]
+- (e.g., External libraries, Internal modules, Types)
+
+## [Prohibited_Patterns]
+- (e.g., No explicit 'any', No 'var')
 
 ## [Standard_Library_Signatures]
 - (Immutable reference to core methods to avoid tokenized re-learning)
 
 ```
+By anchoring the AI's "Grammar Handshake" to these specific rules, we prevent repetitive syntax errors and save thousands of tokens.
+
+---
 
 ### 3. `.hash.md` (Architectural Contract)
 
