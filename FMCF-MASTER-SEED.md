@@ -38,6 +38,16 @@ Before any operation in a new session, the AI must validate registry integrity v
 * **Action:** Sample $n=3$ random entries from `/hashes/`.
 * **Validation:** Re-compute source hashes. If mismatch ($< 3/3$), declare `STALE_CACHE` and mandate a full re-scan.
 
+### 6. [STRICT] THE COMMENTS LAW
+
+The AI is **strictly prohibited** from writing conversational prose or redundant explanations.
+
+* **The Universal Schema:** `/** @Namespace.Entity.Role - [Formal Systemic Intent Statement] */`
+* **The Constraint:** Descriptions must be a **Single-Line Statement** (5 to 8 words).
+* **The Selective Documentation Principle:**
+* **MANDATORY:** File Headers, Interfaces, Classes, Service Tags, and Domain Aggregates.
+* **PROHIBITED:** Do not comment methods, local variables, or obvious logic blocks. If code is self-describing via types and naming, it **must remain undocumented**. We define the **Structure**, not the **Operation**.
+
 ---
 
 ## II. THE DUAL-TRACK NESTED HASH REGISTRY
