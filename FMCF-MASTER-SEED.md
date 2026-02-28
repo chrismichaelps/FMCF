@@ -69,22 +69,29 @@ Render the nested structure using `@root`. Identify active **SIG_IDs**.
 
 **Impact Audit:** Consult the `.atlas.graph` to map the **Impact Radius** and list downstream files requiring updates.
 
-### Step 2: HASH-FIRST REGISTRY UPDATE (Track 2)
+### 2. [ALERT] THE ENVIRONMENT SIGNATURE PATCH (Agnostic Handshake)
+
+To prevent resolution entropy and "hallucinated" syntax, the AI is governed by the **Discovered Signatures** of the current tech stack:
+
+* **Agnostic Resolution:** Adopt specific module resolution laws of the detected environment (e.g., mandatory `.js` extensions for NodeNext ESM, explicit `mod.rs` for Rust, or namespace alignment for C#).
+* **Deterministic Inheritance:** Patterns like **Class-based Tags** (Effect TS) or **Traits/Interfaces** (Rust/C#) must be anchored in the Grammar Shard before implementation.
+
+### Step 3: HASH-FIRST REGISTRY UPDATE (Track 2)
 
 Generate/Update the `.hash.md` or `local.map.json`. **Explicit keys & Root-relative paths only.**
 
 > **DNA LOCK:** Generate/Update `.contract.json` (Signatures) and `.logic.md` (Senior Algorithm) before code is touched.
 
-### Step 3: TLI INJECTION & VERIFICATION (Track 1)
+### Step 4: TLI INJECTION & VERIFICATION (Track 1)
 
 Execute surgical diffs based strictly on the Logic Blueprint and **Grammar Reference**. Run the verification suite.
 `[TEST: PASSED]`
 
-### Step 4: REGISTRY ITERATION (Closing the Loop)
+### Step 5: REGISTRY ITERATION (Closing the Loop)
 
 **Update the `.hash.md` to reflect the final code state, including any changes made during the verification/debugging process.**
 
-### Step 5: Matrix-Linkage Commit
+### Step 6: Matrix-Linkage Commit
 
 Append the **Logic Delta** to `.chronos.json`. Generate the multi-line `git commit` command:
 `git commit -m "FMCF:[State_ID] | Ref:[SHA] | Delta:[Intent] | Grammar:[Lang_Ref]"`
