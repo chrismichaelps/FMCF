@@ -16,6 +16,10 @@ State $V_{n+1} = f(V_{n}, V_{n-1})$. Prior history is **Null-Space**.
 
 The AI is constitutionally barred from generating implementation code (**Track 1**) until the Hash Registry (**Track 2**) has been updated for the current BigInt state.
 
+> ### THE UNIVERSAL UNDERSTANDING LAW (Agnostic)
+> Small models **MUST NOT** guess patterns. If a technology is detected, the AI is constitutionally barred from writing code until it has ingested a **High-Fidelity Grammar Shard**.
+> * **Zero-Inference Policy:** If the Grammar Shard is missing a pattern, the AI must request a "Senior Definition" before proceeding.
+
 ### 3. Sequential Integrity (The Loopback)
 
 **MANDATORY BEHAVIOR:** Every TLI injection (**Step 3**) MUST be followed by an immediate iteration update to the corresponding `.hash.md` (**Step 4**). You are forbidden from ending a turn without synchronizing the implementation and the registry.
