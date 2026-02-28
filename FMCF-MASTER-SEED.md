@@ -69,6 +69,28 @@ Render the nested structure using `@root`. Identify active **SIG_IDs**.
 
 **Impact Audit:** Consult the `.atlas.graph` to map the **Impact Radius** and list downstream files requiring updates.
 
+### `.atlas.graph` (Impact Radius Map)
+
+```json
+{
+  "graph_version": "1.0",
+  "state_anchor": "BigInt:0x...",
+  "description": "Directional dependency edges. When an upstream node changes, all downstream nodes are flagged DIRTY.",
+  "grammar_refs": { "lang": "@root/hashes/grammar/lang.hash.md" },
+  "edges": [
+    {
+      "from": "upstream-shard",
+      "to": "downstream-shard",
+      "type": "SCHEMA_CONTRACT | LAYER_DEPENDENCY",
+      "impact": "HIGH | MEDIUM | LOW",
+      "reason": "Explicit logic coupling description"
+    }
+  ],
+  "dirty_propagation_rule": "When a node's fidelity_level changes to DIRTY, recursively mark all nodes reachable via outgoing edges as DIRTY"
+}
+```
+
+
 ### 2. [ALERT] THE ENVIRONMENT SIGNATURE PATCH (Agnostic Handshake)
 
 To prevent resolution entropy and "hallucinated" syntax, the AI is governed by the **Discovered Signatures** of the current tech stack:
@@ -134,22 +156,26 @@ Append the **Logic Delta** to `.chronos.json`. Generate the multi-line `git comm
 
 ```markdown
 ---
-Language: [e.g., TypeScript | Rust | Solidity]
-Version: [e.g., 5.x | 1.75 | 0.8.20]
+Language: [e.g., TypeScript | Rust | C#]
+Version: [Pinned SDK Version]
 Fidelity: 100% (Static Reference)
 ---
-## [Syntax_Rules]
-- (e.g., Strict Null Checks)
-- (e.g., Functional composition over classes)
+## [SDK_Imports / Namespaces]
+- (Immutable reference to core libraries/packages)
 
-## [Naming_Conventions]
-- (e.g., camelCase for variables, PascalCase for components)
+## [Core_Primitives]
+- (Fundamental types, Result/Effect objects, or standard traits)
 
-## [Import_Order]
-- (e.g., External libraries, Internal modules, Types)
+## [Architectural_Laws]
+- **Export_Law**: [Opaque API definition]
+- **Transformation_Law**: [Mapper responsibility]
+- **Propagation_Law**: [Error wrapping strategy]
+
+## [Syntax_Rules] | [Naming_Conventions]
+- (e.g., PascalCase for Classes, Mandatory .js extensions)
 
 ## [Prohibited_Patterns]
-- (e.g., No explicit 'any', No 'var')
+- (e.g., No explicit 'any', No 'var', No global state)
 
 ## [Standard_Library_Signatures]
 - (Immutable reference to core methods to avoid tokenized re-learning)
@@ -202,4 +228,6 @@ Triggered when efficiency $< 50\%$. The AI outputs a **World State Vector (WSV)*
 
 ### **The "Integrity Anchor" Directive**
 
-> **AI INSTRUCTION:** You are the **Forensic Guardian**. If you are coding, you MUST iterate to update the hashes. This is not optional. You are **forbidden** from ignoring the Git history, Logic Deltas, the Grammar Reference, or the **Cache Trust Gate**. Before you inject syntax, you must align with the Linguistic DNA in `@root/hashes/grammar/`. **The Hash is the Truth. The Grammar is the Law. The History is the Evidence.**
+> **AI INSTRUCTION:** You are the **Forensic Guardian**. If you are coding, you MUST iterate to update the hashes. This is not optional. You are **forbidden** from ignoring the Git history, Logic Deltas, the Grammar Reference, or the **Cache Trust Gate**. Before you inject syntax, you must align with the Linguistic DNA in `@root/hashes/grammar/`. 
+> 
+> **The Hash is the Truth. The Grammar is the Law. The History is the Evidence.**
