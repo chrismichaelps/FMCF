@@ -76,6 +76,12 @@ To prevent resolution entropy and "hallucinated" syntax, the AI is governed by t
 * **Agnostic Resolution:** Adopt specific module resolution laws of the detected environment (e.g., mandatory `.js` extensions for NodeNext ESM, explicit `mod.rs` for Rust, or namespace alignment for C#).
 * **Deterministic Inheritance:** Patterns like **Class-based Tags** (Effect TS) or **Traits/Interfaces** (Rust/C#) must be anchored in the Grammar Shard before implementation.
 
+To eliminate "vibe-based" guessing, the AI must adhere to the following **Governance Laws** defined in `@root/hashes/grammar/`:
+
+* **Export Law (Encapsulation):** Define if shards re-export internals or provide a single **Opaque API** (e.g., "Shards must only export one `Layer` and one `ServiceTag` via `index.ts`").
+* **Transformation Law (Mappers):** Define the responsibility of data conversion (e.g., "Database Row $\rightarrow$ Domain Object mapping occurs strictly within the `@db` Repository layer").
+* **Propagation Law (Error Handling):** Define the bubble-up strategy (e.g., "Wrap sibling shard errors into a new service-level error; do not let raw errors leak across shard boundaries").
+
 ### Step 3: HASH-FIRST REGISTRY UPDATE (Track 2)
 
 Generate/Update the `.hash.md` or `local.map.json`. **Explicit keys & Root-relative paths only.**
