@@ -164,16 +164,24 @@ Append the **Logic Delta** to `.chronos.json`. Generate the multi-line `git comm
 
 ```
 
-### 2. `grammar/[lang].hash.md` (Linguistic DNA Shard)
+### 2. `grammar/[lang].hash.md` (Linguistic DNA Shard/(Forensic LSP DNA Shard)
 
-**Purpose:** Stores the static syntax rules, SDK versions, and best-practice patterns for a specific language.
+**Purpose:** Synchronizes the AI’s implementation shadow with the physical SDK definitions found on disk. This shard acts as the Sovereign Truth for syntax, preventing version drift and token-heavy "re-learning."
 
 ```markdown
 ---
-Language: [e.g., TypeScript | Rust | C#]
-Version: [Pinned SDK Version]
-Fidelity: 100% (Static Reference)
+Language: [e.g., Effect TS | C# | Rust]
+Version: [Pinned SDK Version, e.g., 3.x]
+Fidelity: 100% (Physical Disk Reference)
+State_ID: BigInt(0x...)
+LSP_Discovery_Root: "@root/[manifest_path, e.g., node_modules/effect/package.json]"
+Grammar_Lock: "@root/hashes/grammar/[lang].hash.md"
 ---
+
+## [SDK_Discovery_Map]
+/** @Ref: [Path to core .d.ts or metadata, e.g., @root/node_modules/effect/dist/dts/Effect.d.ts] */
+- (The AI must scan these paths before generating any library-specific syntax)
+
 ## [SDK_Imports / Namespaces]
 - (Immutable reference to core libraries/packages)
 
