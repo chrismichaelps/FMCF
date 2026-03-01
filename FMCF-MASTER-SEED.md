@@ -166,6 +166,8 @@ Append the **Logic Delta** to `.chronos.json`. Generate the multi-line `git comm
 
 ### 2. `grammar/[lang].hash.md` (Linguistic DNA Shard/(Forensic LSP DNA Shard)
 
+**Key:** Abstraction Approach
+
 **Purpose:** Synchronizes the AI’s implementation shadow with the physical SDK definitions found on disk. This shard acts as the Sovereign Truth for syntax, preventing version drift and token-heavy "re-learning."
 
 ```markdown
