@@ -64,7 +64,7 @@ The [`hashes/`](https://github.com/chrismichaelps/FMCF/tree/main/hashes) folder 
 The first session is intentionally expensive. You trigger it with a single directive:
 
 ```
-"Before starting any coding, press F1 and begin defining the hash folder."
+Before initiating any development work, please proceed with F1 to define and structure the hashes directory. Additionally, prioritize the grammar learning process by thoroughly analyzing, refining, and formalizing the grammatical rules before proceeding to implementation.
 ```
 
 The AI reads the FMCF Master Seed and your spec, then generates the entire `hashes/` scaffold — grammar shards, topology map, shard contracts, and logic blueprints — **before writing a single line of source code**. This is the one-time cost that eliminates all future redundancy.
